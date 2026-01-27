@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: all;
+};
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.date-input {
+  @apply input w-60 text-black outline-none rounded-3xl border-accent border-2 text-lg py-5 cursor-pointer;
+}
+
+.button {
+  @apply btn btn-accent text-lg py-5 rounded-3xl w-60;
+}
+
+.paginate-button {
+  @apply join-item btn text-accent bg-white font-bold text-lg border-accent border-2 w-10 rounded-md;
+}
+
+.paginate-button .btn-active {
+  @apply bg-accent text-white;
+}
+
+.login-input {
+  @apply input outline-none border-2 rounded-3xl w-60 py-5 text-lg pr-12 placeholder:text-[#635353];
+}
