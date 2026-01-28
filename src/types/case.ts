@@ -3,7 +3,7 @@ export type Case = {
   lastName: string;
   firstName: string;
   middleName: string;
-  birthDate: string;       // позже можно заменить на Date/ISO-строку
+  birthDate: string;   
   articleOrRefusal: string;
   sentAt: string;
   reviewedAt: string;

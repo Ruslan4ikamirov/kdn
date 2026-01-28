@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm shadow-accent mb-10 flex items-center justify-between py-3">
+    <div className="navbar bg-base-100 shadow-sm shadow-accent mb-10 flex items-center justify-between py-3 px-6">
         <Link to="/list">
             <img 
                 src="/logo.svg" 
@@ -11,13 +11,13 @@ const Header = () => {
             />
         </Link>
         <ul className="flex gap-5 text-accent text-xl font-semibold">
-            <li className="px-2 py-0.5 rounded-3xl transition-colors duration-400 ease-in">
+            <li className="px-2 py-0.5 rounded-3xl">
                 <Link to="/list">Материалы</Link>
             </li>
-            <li className="px-2 py-0.5 rounded-3xl transition-colors duration-400 ease-in">
+            <li className="px-2 py-0.5 rounded-3xl">
                 <Link to="/download">Выгрузка данных</Link>
             </li>
-            <li className="px-2 py-0.5 rounded-3xl transition-colors duration-400 ease-in">
+            <li className="px-2 py-0.5 rounded-3xl">
                 <Link to="/upload">Загрузка данных</Link>
             </li>
         </ul>

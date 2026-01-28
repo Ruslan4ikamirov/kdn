@@ -30,5 +30,8 @@
 }
 
 .select-input {
-  @apply select w-60 text-black outline-none border-2 border-accent rounded-3xl py-5 cursor-pointer;
+  @apply select w-60 outline-none text-black cursor-pointer border-2 border-accent rounded-3xl h-11;
 }
+
+
+ /* text-black outline-none border-2 border-accent rounded-3xl py-5 cursor-pointer */
