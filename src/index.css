@@ -26,5 +26,9 @@
 }
 
 .login-input {
-  @apply input outline-none border-2 rounded-3xl w-60 py-5 text-lg pr-12 placeholder:text-[#635353];
+  @apply input outline-none border-2 border-accent rounded-3xl w-60 py-5 text-lg pr-12 placeholder:text-[#635353];
+}
+
+.select-input {
+  @apply select w-60 text-black outline-none border-2 border-accent rounded-3xl py-5 cursor-pointer;
 }

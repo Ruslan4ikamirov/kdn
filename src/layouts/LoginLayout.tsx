@@ -32,14 +32,14 @@ const LoginLayout = () => {
             <input
                 type="text"
                 placeholder="Логин"
-                className={`${errors.login ? "border-red-600" : "border-accent"} input outline-none border-2 rounded-3xl w-60 py-5 text-lg pr-12 placeholder:text-[#635353]`}
+                className={`${errors.login ? "border-red-500!" : ""} login-input`}
                 {...register("login", {required: true})}
           />
           <div className="relative w-60">
             <input
                 type={show ? "text" : "password"}
                 placeholder="Пароль"
-                className={`${errors.password ? "border-red-600" : "border-accent"} input outline-none border-2 rounded-3xl w-60 py-5 text-lg pr-12 placeholder:text-[#635353]`}
+                className={`${errors.password ? "border-red-500!" : ""} login-input`}
                 {...register("password", {required: true})}
             />
             <button
@@ -49,7 +49,7 @@ const LoginLayout = () => {
             >
                 <img
                     src={show ? "/eye-off.svg" : "/eye.svg"}
-                    alt=""
+                    alt="Eye"
                     className="w-6 h-6"
                 />
             </button>

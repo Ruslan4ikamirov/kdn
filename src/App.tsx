@@ -4,6 +4,8 @@ import LoginLayout from "./layouts/LoginLayout";
 import UploadLayout from "./layouts/UploadLayout";
 import DownloadLayout from "./layouts/DownloadLayout";
 import PersonLayout from "./layouts/PersonLayout";
+import Loader from "./components/Loader";
+import ErrrorLayout from "./layouts/ErrrorLayout";
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
     <Route path="/upload" element={<UploadLayout />} />
     <Route path="/download" element={<DownloadLayout />} />
     <Route path="/person/:id" element={<PersonLayout />} />
+    <Route path="/loading" element={<Loader />} />
+    <Route path="/error" element={<ErrrorLayout />} />
    </Routes>
   );
 };

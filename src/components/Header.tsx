@@ -12,7 +12,7 @@ const Header = () => {
         </Link>
         <ul className="flex gap-5 text-accent text-xl font-semibold">
             <li className="px-2 py-0.5 rounded-3xl transition-colors duration-400 ease-in">
-                <Link to="/list">Личные дела</Link>
+                <Link to="/list">Материалы</Link>
             </li>
             <li className="px-2 py-0.5 rounded-3xl transition-colors duration-400 ease-in">
                 <Link to="/download">Выгрузка данных</Link>

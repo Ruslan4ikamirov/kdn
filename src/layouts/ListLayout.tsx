@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -9,7 +9,7 @@ const ListLayout = () => {
   const [q, setQ] = useState<string>("");
   const [page, setPage]= useState<number>(1);
 
-  const PAGE_SIZE = 5;
+  const PAGE_SIZE = 8;
 
   const filteredRows = useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -27,9 +27,10 @@ const ListLayout = () => {
 
   const currentPage = Math.min(Math.max(page, 1), lastPage);
 
-  useEffect(() => {
+  const onChangeQuery = (e:React.ChangeEvent<HTMLInputElement>) => {
+    setQ(e.target.value);
     setPage(1);
-  }, [q]);
+  }
 
   const pageRows = useMemo(() => {
     const start = (currentPage - 1) * PAGE_SIZE;
@@ -47,7 +48,7 @@ const ListLayout = () => {
           className="input w-60 text-black outline-none border-2 border-accent rounded-3xl placeholder:text-[#635353] text-md"
           placeholder="Поиск"
           value={q}
-          onChange={(e) => setQ(e.target.value)}
+          onChange={onChangeQuery}
         />
       </div>
     {filteredRows.length > 0 ? (<div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">

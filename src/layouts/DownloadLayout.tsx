@@ -1,9 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Modal from "../components/Modal";
 import {useForm, useWatch} from "react-hook-form";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 type Filters = {
     decisionFrom: string,
@@ -37,10 +35,6 @@ const DownloadLayout = () => {
     mode: "onChange",
   });
 
-  const [open, setOpen] = useState<boolean>(false);
-
-  const navigate = useNavigate();
-
   const decisionFrom = useWatch({control, name: "decisionFrom"});
   const incidentFrom = useWatch({control, name: "incidentFrom"});
 
@@ -54,14 +48,8 @@ const DownloadLayout = () => {
 
   const onSubmit = (data: Filters) => {
     console.log("export", data);
-    setOpen(true);
   }
 
-  const closeModal = () => {
-    setOpen(false);
-    navigate("/", {replace: true});
-  }
-  
   return (
     <div className="min-h-screen flex flex-col">
         <Header />
@@ -104,7 +92,7 @@ const DownloadLayout = () => {
                         )}
                     </div>
                     <div className="flex flex-col gap-5 items-center">
-                        <p className="text-accent text-2xl font-normal">Дата инцидента</p>
+                        <p className="text-accent text-2xl font-normal">Дата направления материалов</p>
                         <div className="flex items-center gap-2">
                             <div className="flex flex-col gap-5">
                                 <div className="flex items-center">
@@ -154,7 +142,6 @@ const DownloadLayout = () => {
                     </button>
                 </div>
             </form>
-            {open && <Modal open={open} onClose={closeModal} />}
         </main>
         <Footer/>
     </div>
