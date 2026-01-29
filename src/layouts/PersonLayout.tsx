@@ -79,7 +79,7 @@ const PersonLayout = () => {
                         <ul className="space-y-3 max-w-300">
                             <li className="grid grid-cols-[1fr_240px] items-center gap-6 justify-items-end">
                                 <span className="font-bold justify-self-start">
-                                Дата фактического рассмотрения административного/отказного материала:
+                                    Дата фактического рассмотрения административного/отказного материала:
                                 </span>
                                 <input 
                                     type="date" 

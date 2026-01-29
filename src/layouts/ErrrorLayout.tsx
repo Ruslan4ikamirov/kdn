@@ -1,12 +1,4 @@
-type ErrorInfo = {
-    title: string,
-    description: string,
-}
-
-type ErrorProps = {
-    status: number,
-    message: string,
-}
+import type { ErrorInfo, ErrorProps } from "../types/Errors";
 
 const ERRORS: Record<number, ErrorInfo> = {
   400: {

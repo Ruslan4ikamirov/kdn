@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Footer from "../components/Footer";
 import {useForm} from "react-hook-form";
+import { replace, useNavigate } from "react-router-dom";
 
 type LoginData = {
   login: string,
@@ -10,6 +11,8 @@ type LoginData = {
 const LoginLayout = () => {
 
   const [show, setShow] = useState(false);
+  
+  const navigate = useNavigate();
 
   const {
     register,
@@ -19,7 +22,9 @@ const LoginLayout = () => {
 
   const onSubmit = (data: LoginData) => {
     console.log("export", data);
+    navigate('/list', {replace: true});
   }
+
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 flex justify-center items-center">
